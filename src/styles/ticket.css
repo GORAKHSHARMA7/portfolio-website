@@ -1,0 +1,113 @@
+/* Service/product card — clean minimal style for Style B */
+
+.ticket {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+}
+
+.ticket:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-500);
+}
+
+.ticket__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ticket__no {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+.ticket__status {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--success-600);
+  background: var(--success-50);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ticket__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  background: var(--ink-900);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ticket h3 {
+  font-size: 1.2rem;
+}
+
+.ticket p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.ticket__perf {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.ticket__perf a {
+  color: var(--accent-600);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.ticket__perf a:hover {
+  gap: 8px;
+}
+
+.ticket__price {
+  color: var(--ink-700);
+  font-weight: 700;
+}
+
+.ticket--dark {
+  background: var(--ink-900);
+  border-color: var(--ink-700);
+}
+
+.ticket--dark p {
+  color: var(--gray-300);
+}
+
+.ticket--dark .ticket__perf {
+  border-top-color: var(--ink-700);
+}

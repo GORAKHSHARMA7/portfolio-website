@@ -1,0 +1,131 @@
+.service-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: calc(var(--nav-height) + 56px);
+}
+
+.service-detail:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-detail--reverse {
+  grid-template-columns: 1fr 260px;
+}
+
+.service-detail--reverse .service-detail__visual {
+  order: 2;
+}
+
+.service-detail__visual {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.service-detail__no {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  letter-spacing: 0.08em;
+}
+
+.service-detail__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--ink-900);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-detail__icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.service-detail__status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--success-600);
+  background: var(--success-50);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+
+.service-detail__copy h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+}
+
+.service-detail__copy > p {
+  color: var(--gray-600);
+  margin-top: var(--space-3);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.service-points {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.service-points li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.92rem;
+  color: var(--ink-700);
+}
+
+.service-points svg {
+  color: var(--success-600);
+  flex-shrink: 0;
+}
+
+.service-detail__copy .btn {
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 800px) {
+  .service-detail,
+  .service-detail--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail--reverse .service-detail__visual {
+    order: 0;
+  }
+
+  .service-detail__visual {
+    min-height: 160px;
+  }
+}
